@@ -14,6 +14,9 @@
 		31088A4D20AE7B3600539FD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31088A4B20AE7B3600539FD6 /* LaunchScreen.storyboard */; };
 		31088A5020AE7B3600539FD6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 31088A4F20AE7B3600539FD6 /* main.m */; };
 		31088A5A20AE7B3600539FD6 /* RC_KVODemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 31088A5920AE7B3600539FD6 /* RC_KVODemoTests.m */; };
+		31088A6620AE7B9900539FD6 /* RC_Observer.m in Sources */ = {isa = PBXBuildFile; fileRef = 31088A6520AE7B9900539FD6 /* RC_Observer.m */; };
+		31088A6920AE7BFC00539FD6 /* NSObject+RC_KVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 31088A6820AE7BFC00539FD6 /* NSObject+RC_KVO.m */; };
+		31E92AAA20BCF4BC009CAF58 /* NextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31E92AA920BCF4BC009CAF58 /* NextViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,12 @@
 		31088A5520AE7B3600539FD6 /* RC_KVODemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RC_KVODemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		31088A5920AE7B3600539FD6 /* RC_KVODemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RC_KVODemoTests.m; sourceTree = "<group>"; };
 		31088A5B20AE7B3600539FD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		31088A6420AE7B9900539FD6 /* RC_Observer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RC_Observer.h; sourceTree = "<group>"; };
+		31088A6520AE7B9900539FD6 /* RC_Observer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RC_Observer.m; sourceTree = "<group>"; };
+		31088A6720AE7BFB00539FD6 /* NSObject+RC_KVO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+RC_KVO.h"; sourceTree = "<group>"; };
+		31088A6820AE7BFC00539FD6 /* NSObject+RC_KVO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+RC_KVO.m"; sourceTree = "<group>"; };
+		31E92AA820BCF4BC009CAF58 /* NextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NextViewController.h; sourceTree = "<group>"; };
+		31E92AA920BCF4BC009CAF58 /* NextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NextViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +69,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		310821BB20C8E0A800C65461 /* RC_KVO */ = {
+			isa = PBXGroup;
+			children = (
+				31088A6720AE7BFB00539FD6 /* NSObject+RC_KVO.h */,
+				31088A6820AE7BFC00539FD6 /* NSObject+RC_KVO.m */,
+			);
+			path = RC_KVO;
+			sourceTree = "<group>";
+		};
 		31088A3420AE7B3400539FD6 = {
 			isa = PBXGroup;
 			children = (
+				310821BB20C8E0A800C65461 /* RC_KVO */,
 				31088A3F20AE7B3400539FD6 /* RC_KVODemo */,
 				31088A5820AE7B3600539FD6 /* RC_KVODemoTests */,
 				31088A3E20AE7B3400539FD6 /* Products */,
@@ -81,10 +100,14 @@
 		31088A3F20AE7B3400539FD6 /* RC_KVODemo */ = {
 			isa = PBXGroup;
 			children = (
+				31088A6420AE7B9900539FD6 /* RC_Observer.h */,
+				31088A6520AE7B9900539FD6 /* RC_Observer.m */,
 				31088A4020AE7B3400539FD6 /* AppDelegate.h */,
 				31088A4120AE7B3400539FD6 /* AppDelegate.m */,
 				31088A4320AE7B3400539FD6 /* ViewController.h */,
 				31088A4420AE7B3400539FD6 /* ViewController.m */,
+				31E92AA820BCF4BC009CAF58 /* NextViewController.h */,
+				31E92AA920BCF4BC009CAF58 /* NextViewController.m */,
 				31088A4620AE7B3400539FD6 /* Main.storyboard */,
 				31088A4920AE7B3600539FD6 /* Assets.xcassets */,
 				31088A4B20AE7B3600539FD6 /* LaunchScreen.storyboard */,
@@ -203,9 +226,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31088A6620AE7B9900539FD6 /* RC_Observer.m in Sources */,
+				31E92AAA20BCF4BC009CAF58 /* NextViewController.m in Sources */,
 				31088A4520AE7B3400539FD6 /* ViewController.m in Sources */,
 				31088A5020AE7B3600539FD6 /* main.m in Sources */,
 				31088A4220AE7B3400539FD6 /* AppDelegate.m in Sources */,
+				31088A6920AE7BFC00539FD6 /* NSObject+RC_KVO.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,8 +387,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 36D935N6NX;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = LL8F85Z68Y;
 				INFOPLIST_FILE = RC_KVODemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -370,6 +396,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.haodai.RC-KVODemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "d7b464c0-92c3-4889-923b-37fe71b86ac8";
+				PROVISIONING_PROFILE_SPECIFIER = HDCommonDev;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -378,8 +406,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 36D935N6NX;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = LL8F85Z68Y;
 				INFOPLIST_FILE = RC_KVODemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -387,6 +415,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.haodai.RC-KVODemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "d7b464c0-92c3-4889-923b-37fe71b86ac8";
+				PROVISIONING_PROFILE_SPECIFIER = HDCommonDev;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

@@ -7,8 +7,13 @@
 //
 
 #import "NextViewController.h"
+#import "NSObject+RC_KVO.h"
+#import "RC_Observer.h"
+
 
 @interface NextViewController ()
+
+@property (strong, nonatomic) RC_Observer *observer;
 
 @end
 
@@ -16,9 +21,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.observer = [RC_Observer new];
+    [self.observer rc_addObserver:self forKey:@"observedPage" handler:^(id observer, NSString *key, id oldVal, id newVal) {
+        NSLog(@"value change next");
+    }];
+    self.observer.observedPage = @"20";
+    
+    [self.observer rc_addObserver:self forKey:@"observedNum" handler:^(id observer, NSString *key, id oldVal, id newVal) {
+        NSLog(@"value change next");
+    }];
+    self.observer.observedPage = @"120";
 }
 
+
+- (void)dealloc{
+    [self.observer rc_removeObserver:self forKey:@"observedPage"];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
